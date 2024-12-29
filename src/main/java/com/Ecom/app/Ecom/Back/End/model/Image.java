@@ -12,7 +12,9 @@ public class Image {
     private Long id;
     private String name;
     private String type;
+    private String downloadUrl;
 
+    @JsonIgnore
     @Lob
     private byte[] data;
 

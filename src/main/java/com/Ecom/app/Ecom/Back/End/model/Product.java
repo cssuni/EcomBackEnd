@@ -1,5 +1,6 @@
 package com.Ecom.app.Ecom.Back.End.model;
 
+import com.Ecom.app.Ecom.Back.End.dto.ImageDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,7 +33,6 @@ public class Product {
     private Category category;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-//     that means, if one product is deleted then related all images will be deleted.
     private List<Image> images;
 
 
