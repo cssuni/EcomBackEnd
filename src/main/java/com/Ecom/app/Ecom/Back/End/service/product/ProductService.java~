@@ -115,7 +115,13 @@ public class ProductService implements IProductService{
 
     public  ProductDto productToDto(Product product){
 
-        return modelMapper.map(product, ProductDto.class);
+        ProductDto productDto = modelMapper.map(product, ProductDto.class);
+
+        
+
+        System.out.println(productDto);
+
+        return productDto;
     }
 
     @Override
